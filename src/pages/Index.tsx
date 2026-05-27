@@ -1,8 +1,8 @@
 export default function Index() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen" style={{background: 'var(--brand-light)'}}>
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-black">
+      <nav className="fixed top-0 left-0 w-full z-50 border-b" style={{background: 'var(--brand-light)', borderColor: 'var(--brand-yellow)'}}>
         <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
           <a href="/" className="flex items-center gap-3">
             <img
@@ -10,16 +10,16 @@ export default function Index() {
               alt="СКОПИРОВ"
               className="w-12 h-12 rounded-full object-cover"
             />
-            <span className="text-xl font-bold tracking-tighter">СКОПИРОВ</span>
+            <span className="text-xl font-bold tracking-tighter" style={{color: 'var(--brand-dark)'}}>СКОПИРОВ</span>
           </a>
           <div className="flex space-x-8">
-            <a href="#work" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#work" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow-dark)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               Работы
             </a>
-            <a href="#about" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#about" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow-dark)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               О нас
             </a>
-            <a href="#contact" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#contact" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow-dark)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               Контакты
             </a>
           </div>
@@ -42,69 +42,72 @@ export default function Index() {
             </p>
             <a
               href="#contact"
-              className="inline-block mt-8 px-8 py-3 bg-black text-white text-sm uppercase tracking-widest hover:bg-red-600 transition-colors"
+              className="inline-block mt-8 px-8 py-3 text-sm uppercase tracking-widest transition-colors"
+              style={{background: 'var(--brand-yellow)', color: 'var(--brand-dark)'}}
+              onMouseEnter={e => (e.currentTarget.style.background = 'var(--brand-yellow-dark)')}
+              onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-yellow)')}
             >
               Получить расчёт
             </a>
           </div>
           <div className="col-span-12 md:col-span-5 flex items-center justify-center">
-            <div className="relative w-full aspect-square bg-red-600">
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-black"></div>
+            <div className="relative w-full aspect-square" style={{background: 'var(--brand-yellow)'}}>
+              <div className="absolute -bottom-4 -right-4 w-24 h-24" style={{background: 'var(--brand-gray)'}}></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Work Section */}
-      <section id="work" className="py-20 px-4 md:px-8 bg-black text-white">
+      <section id="work" className="py-20 px-4 md:px-8" style={{background: 'var(--brand-dark)', color: 'var(--brand-light)'}}>
         <div className="container mx-auto">
           <h2 className="text-6xl font-bold tracking-tighter mb-12">РАБОТЫ</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Project 1 */}
             <div className="group">
-              <div className="aspect-square bg-white mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-neutral-100 group-hover:bg-red-600 transition-colors duration-300">
-                  <span className="text-black text-8xl font-bold">01</span>
+              <div className="aspect-square mb-4 overflow-hidden" style={{background: 'var(--brand-light)'}}>
+                <div className="w-full h-full flex items-center justify-center transition-colors duration-300" style={{background: 'var(--brand-light)'}} onMouseEnter={e => (e.currentTarget.style.background = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-light)')}>
+                  <span className="text-8xl font-bold" style={{color: 'var(--brand-dark)'}}>01</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-2">Корпоративная полиграфия</h3>
-              <p className="text-neutral-400">Визитки, бланки, конверты и папки для крупной строительной компании</p>
+              <p style={{color: 'var(--brand-gray)'}}>Визитки, бланки, конверты и папки для крупной строительной компании</p>
             </div>
 
             {/* Project 2 */}
             <div className="group">
-              <div className="aspect-square bg-white mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-neutral-100 group-hover:bg-red-600 transition-colors duration-300">
-                  <span className="text-black text-8xl font-bold">02</span>
+              <div className="aspect-square mb-4 overflow-hidden" style={{background: 'var(--brand-light)'}}>
+                <div className="w-full h-full flex items-center justify-center transition-colors duration-300" style={{background: 'var(--brand-light)'}} onMouseEnter={e => (e.currentTarget.style.background = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-light)')}>
+                  <span className="text-8xl font-bold" style={{color: 'var(--brand-dark)'}}>02</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-2">Сувениры для события</h3>
-              <p className="text-neutral-400">Брендированные ежедневники, ручки, кружки и шопперы для корпоративного форума</p>
+              <p style={{color: 'var(--brand-gray)'}}>Брендированные ежедневники, ручки, кружки и шопперы для корпоративного форума</p>
             </div>
 
             {/* Project 3 */}
             <div className="group">
-              <div className="aspect-square bg-white mb-4 overflow-hidden">
-                <div className="w-full h-full flex items-center justify-center bg-neutral-100 group-hover:bg-red-600 transition-colors duration-300">
-                  <span className="text-black text-8xl font-bold">03</span>
+              <div className="aspect-square mb-4 overflow-hidden" style={{background: 'var(--brand-light)'}}>
+                <div className="w-full h-full flex items-center justify-center transition-colors duration-300" style={{background: 'var(--brand-light)'}} onMouseEnter={e => (e.currentTarget.style.background = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.background = 'var(--brand-light)')}>
+                  <span className="text-8xl font-bold" style={{color: 'var(--brand-dark)'}}>03</span>
                 </div>
               </div>
               <h3 className="text-xl font-bold mb-2">Каталоги и буклеты</h3>
-              <p className="text-neutral-400">Многостраничные каталоги продукции с качественной цветопередачей для ретейл-сети</p>
+              <p style={{color: 'var(--brand-gray)'}}>Многостраничные каталоги продукции с качественной цветопередачей для ретейл-сети</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 md:px-8">
+      <section id="about" className="py-20 px-4 md:px-8" style={{background: 'var(--brand-light)'}}>
         <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-8">
             <div className="col-span-12 md:col-span-5">
-              <h2 className="text-6xl font-bold tracking-tighter mb-8">О НАС</h2>
-              <div className="aspect-[4/5] bg-neutral-100 relative mb-8 md:mb-0">
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 border-2 border-black"></div>
+              <h2 className="text-6xl font-bold tracking-tighter mb-8" style={{color: 'var(--brand-dark)'}}>О НАС</h2>
+              <div className="aspect-[4/5] relative mb-8 md:mb-0" style={{background: '#EDE8D8'}}>
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 border-2" style={{borderColor: 'var(--brand-yellow)'}}></div>
               </div>
             </div>
             <div className="col-span-12 md:col-span-7 md:pt-24">
@@ -119,7 +122,7 @@ export default function Index() {
               </p>
               <div className="grid grid-cols-2 gap-4 mt-12">
                 <div>
-                  <h3 className="text-sm uppercase tracking-widest mb-2">Принципы</h3>
+                  <h3 className="text-sm uppercase tracking-widest mb-2" style={{color: 'var(--brand-gray)'}}>Принципы</h3>
                   <ul className="space-y-2">
                     <li>Точность цвета</li>
                     <li>Чёткость деталей</li>
@@ -128,7 +131,7 @@ export default function Index() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-sm uppercase tracking-widest mb-2">Услуги</h3>
+                  <h3 className="text-sm uppercase tracking-widest mb-2" style={{color: 'var(--brand-gray)'}}>Услуги</h3>
                   <ul className="space-y-2">
                     <li>Офсетная печать</li>
                     <li>Цифровая печать</li>
@@ -143,7 +146,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 md:px-8 bg-red-600 text-white">
+      <section id="contact" className="py-20 px-4 md:px-8" style={{background: 'var(--brand-yellow)', color: 'var(--brand-dark)'}}>
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
@@ -177,7 +180,8 @@ export default function Index() {
                   <input
                     type="text"
                     id="name"
-                    className="w-full bg-transparent border-b-2 border-white py-2 px-0 focus:outline-none focus:border-black placeholder-white/50"
+                    className="w-full bg-transparent py-2 px-0 focus:outline-none"
+                    style={{borderBottom: '2px solid var(--brand-dark)'}}
                     placeholder="Ваше имя"
                   />
                 </div>
@@ -188,7 +192,8 @@ export default function Index() {
                   <input
                     type="email"
                     id="email"
-                    className="w-full bg-transparent border-b-2 border-white py-2 px-0 focus:outline-none focus:border-black placeholder-white/50"
+                    className="w-full bg-transparent py-2 px-0 focus:outline-none"
+                    style={{borderBottom: '2px solid var(--brand-dark)'}}
                     placeholder="Ваш email"
                   />
                 </div>
@@ -199,13 +204,17 @@ export default function Index() {
                   <textarea
                     id="message"
                     rows={4}
-                    className="w-full bg-transparent border-b-2 border-white py-2 px-0 focus:outline-none focus:border-black placeholder-white/50"
+                    className="w-full bg-transparent py-2 px-0 focus:outline-none"
+                    style={{borderBottom: '2px solid var(--brand-dark)'}}
                     placeholder="Опишите ваш заказ: тип продукции, тираж, сроки"
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="mt-8 px-8 py-3 bg-black text-white text-sm uppercase tracking-widest hover:bg-white hover:text-black transition-colors"
+                  className="mt-8 px-8 py-3 text-sm uppercase tracking-widest transition-colors"
+                  style={{background: 'var(--brand-dark)', color: 'var(--brand-yellow)'}}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'var(--brand-gray)'; }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'var(--brand-dark)'; }}
                 >
                   Отправить заявку
                 </button>
@@ -216,17 +225,17 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 md:px-8 bg-black text-white">
+      <footer className="py-8 px-4 md:px-8" style={{background: 'var(--brand-dark)', color: 'var(--brand-light)'}}>
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm mb-4 md:mb-0">© 2025 СКОПИРОВ. Все права защищены.</p>
+          <p className="text-sm mb-4 md:mb-0" style={{color: 'var(--brand-gray)'}}>© 2025 СКОПИРОВ. Все права защищены.</p>
           <div className="flex space-x-8">
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               Instagram
             </a>
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               ВКонтакте
             </a>
-            <a href="#" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
+            <a href="#" className="text-sm uppercase tracking-widest transition-colors" style={{color: 'var(--brand-gray)'}} onMouseEnter={e => (e.currentTarget.style.color = 'var(--brand-yellow)')} onMouseLeave={e => (e.currentTarget.style.color = 'var(--brand-gray)')}>
               Telegram
             </a>
           </div>
