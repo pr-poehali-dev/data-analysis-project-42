@@ -4,8 +4,13 @@ export default function Index() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-white border-b border-black">
         <div className="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
-          <a href="/" className="text-xl font-bold tracking-tighter">
-            СКОПИРОВ
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="https://cdn.poehali.dev/projects/a6c72c83-bf46-4ad6-bf13-e094bad84e9a/bucket/d9c2f539-6afa-4e33-97d0-95516cbd9497.png"
+              alt="СКОПИРОВ"
+              className="w-12 h-12 rounded-full object-cover"
+            />
+            <span className="text-xl font-bold tracking-tighter">СКОПИРОВ</span>
           </a>
           <div className="flex space-x-8">
             <a href="#work" className="text-sm uppercase tracking-widest hover:text-red-600 transition-colors">
